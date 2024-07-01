@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../template 1 project/webfonts"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "template 1 using bootstrap"
+	}
+}

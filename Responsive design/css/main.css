@@ -1,0 +1,29 @@
+
+*{
+    width: 100%;
+    position: absolute;
+}
+@media (max-width: 767px){
+
+    p{
+        color: red;
+        margin: auto;
+    }
+
+}
+
+@media (min-width: 767px){
+
+    p{
+        color: blue;
+    }
+    
+}
+
+@media (min-width: 1200px){
+
+    p{
+        color: blueviolet   ;font-size: 50px;
+    }
+    
+}
