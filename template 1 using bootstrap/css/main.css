@@ -140,6 +140,7 @@ svg{
 
 .portfolio .porfolio-card{
 
+   margin-bottom: 60px;
    border-radius: 15px;
    margin-right: 15px;
 }
@@ -245,4 +246,9 @@ svg{
     padding: 30px 10px;
     text-align: center;
     font-size: 18px;
+}
+
+.about-info{
+
+    text-align: center;
 }
