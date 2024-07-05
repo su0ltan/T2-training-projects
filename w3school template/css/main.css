@@ -1,0 +1,445 @@
+/*  Start Global rules */
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*  End Global Rules */
+
+
+
+/* Start Header */
+
+.navbar {
+    padding: 0;
+    background-color: black;
+}
+
+.navbar .container-fluid ul li a {
+    color: white;
+    padding: 10px;
+
+
+}
+
+.navbar .container-fluid ul li {
+    text-align: center;
+    width: 100px;
+}
+
+.navbar .container-fluid ul li a:hover {
+    background-color: white;
+    color: black;
+
+}
+
+.navbar .container-fluid .search {
+
+
+
+    height: 100%;
+    padding: 10px;
+
+
+
+}
+
+.navbar .container-fluid .search svg {
+    color: white;
+}
+
+.navbar .container-fluid .search svg:hover {
+    background-color: white;
+    color: black;
+}
+
+/* end Header */
+
+
+
+/* START ADVERTISING COMPONENT */
+
+
+
+.adv-compnent {
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.adv-compnent img {
+    content: '';
+
+    width: 100%;
+    /* Adjust based on number of images */
+    height: 100%;
+
+    background-size: cover;
+
+
+
+    animation: fade 12S infinite;
+
+
+
+}
+
+.adv-compnent h3 {
+
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: fade 12S infinite;
+}
+
+@keyframes fade {
+
+    0%,
+    33.33% {
+        background-image: url('../assets/la.jpg');
+
+    }
+
+    33.33%,
+    66.66% {
+        background-image: url('../assets/ny.jpg');
+    }
+
+    66.66%,
+    100% {
+        background-image: url('../assets/chicago.jpg');
+    }
+
+
+}
+
+
+/*  END ADVERTISIING COMPONENT */
+
+
+
+
+
+
+
+.brand .container {
+
+
+    padding: 5% 10%;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+
+
+}
+
+.brand .container .row div {
+    padding-right: 100px;
+}
+
+.brand h3 {
+    font-weight: normal;
+}
+
+.brand p:first-child {
+
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.brand .container img {
+    border-radius: 5px;
+    max-width: 150px;
+}
+
+.brand .container .col-md-3 {
+    gap: 100px;
+}
+
+/*  end brand */
+
+
+
+
+/*  start tour comp */
+
+
+
+.tour-component {
+
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.tour-component .container {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 5% 10%;
+}
+
+
+
+.tour-component .container h3:first-child {
+    font-weight: normal;
+    color: white;
+    line-height: 1.6;
+}
+
+.tour-component .container p {
+    color: rgb(168, 165, 165);
+
+}
+
+.tour-component .container .dates-box {
+    background-color: white;
+    padding: 0;
+    width: 80%;
+
+
+
+}
+
+.tour-component .container .dates-box .first-row {
+
+    border-bottom: 1px solid rgb(168, 165, 165);
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.tour-component .container .dates-box .first-row p {
+
+    padding: 0 10px;
+
+
+}
+
+.tour-component .container .dates-box .first-row p:last-child {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.tour-component .container .dates-box .first-row:last-child {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.tour-component .container .dates-box .first-row:last-child p:last-child {
+    background-color: black;
+    text-align: center;
+    border-radius: 70px;
+    font-weight: normal;
+    margin: 5px;
+
+}
+
+.ticket {
+    margin-top: 20px;
+    width: 80%;
+
+
+
+
+
+
+
+}
+
+.ticket img {
+    width: 100%
+}
+
+.ticket .box {
+    text-align: start;
+
+
+
+    padding: 0;
+    background-color: white;
+    margin-right: 5px;
+    margin-right: 5px;
+    padding-bottom: 10px;
+
+
+
+}
+
+.ticket .box p {
+    font-weight: normal;
+    color: black;
+
+
+}
+
+.ticket .box .box-info {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    color: rgb(139, 139, 139);
+}
+
+.b-border {
+    border-bottom: 1px solid grey;
+}
+
+.box button {
+    background-color: black;
+    color: white;
+}
+
+.box button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+/*  end tour comp */
+
+
+
+/*  start contact component */
+
+
+
+.contact {
+
+    height: 50vh;
+    margin-top: 20px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+.contact .container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .container input {
+    width: 100%;
+
+    margin-right: 2px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+}
+.submit{
+    background-color: black;
+    color: white;
+    
+}
+
+.submit:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+/*  end contact component */
+
+
+
+
+.background-image{
+
+
+    background-size: cover;
+}
+
+
+
+/* last component */
+
+
+.footer{
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+
+}
+
+.footer .container{
+
+  
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+.footer .container svg{
+
+    color: grey;
+}
