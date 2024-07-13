@@ -1,0 +1,2058 @@
+
+Assignment 1.1: 
+the code will not execute is the script on head because it will be loaded before element.
+
+
+Assignment 1.2:
+    <h1 id="el">Page Title</h1>    
+     const st= document.getElementById("el").style ;
+     st.color = 'blue'
+     st.fontSize= '80px'
+     st.textAlign = 'center'
+     st.fontFamily = 'Arial'
+
+    
+
+Assignment 1.3:
+        console.log("%cElzero %cWeb %cSchool ", "color: red;font-size: 40px","color:green; font-size:40px; font-weight: bold", 'background-color: blue; color:white; font-size: 40px;')
+  
+
+
+Assignment 1.4:
+
+
+        console.group('Group 1')
+        console.log("message 1")
+        console.log('message 2')
+        console.group('child group')
+        console.log("message 1")
+        console.log('message 2')
+        console.group('grand child group')
+        console.log("message 1")
+        console.log('message 2')
+        console.groupEnd();//grand child group
+        console.groupEnd();//child group
+        console.groupEnd();//Group 1
+        console.group('Group 2')
+        console.log("message 1")
+        console.log('message 2')
+        console.groupEnd();//Group 2
+    
+ 
+
+Assignment 1.5:
+
+        console.table(['Elzero', 'Ahmed', 'Sameh', 'Gamal', 'Aya'])
+
+***********************************
+
+
+Assignment 2.1:
+
+ 	let numberOne = 10, numberTwo = 20;
+        console.log("" + numberOne + numberTwo);
+        console.log(typeof (numberOne) + typeof (numberTwo))
+        console.log(`${numberOne}${numberTwo}`)
+        console.log(`${typeof (numberOne)}${typeof (numberTwo)}`)
+        console.log(numberTwo+ "\n" + numberOne)
+        console.log(`${numberTwo}\n${numberOne}`)
+
+
+Assignment 2.2:
+ 	<h1 id="el"></h1>
+        const elzero = document.getElementById('el');
+
+        console.log(elzero.innerHTML);
+        console.log(typeof(elzero));
+
+Assignment 2.3:
+	console.log("\`I'm In \n \\\\ \n Love  \"\"\" \'\'\' \n ++ With ++ \n \\\"\"\" \\\"\"\" \n \"\"JavaScript\"\"\`\` ")
+
+
+Assignment 2.4:
+
+  let a = 21;
+        let b = 20;
+
+        console.log(`_${a}_${b}${a}_${b}${a}_${b}${a}_${b}_`);
+ 
+
+************************************************
+
+Assignment 3.1:
+  console.log((10 - 20 + 15 - 3) * (190 + 10) - 400);
+
+
+Assignment 3.2:
+
+
+     let num = 3;
+
+        // Solution One
+        console.log(num + num); // 6
+
+        // Solution Two
+        console.log(num * (true + true)); // 6
+
+        console.log(num + true + true + true)
+        // Soultion Three
+
+        console.log((num ** (true + true)) - num)
+
+
+        console.log((num << true)); // 6
+
+        console.log( num * num - num); // 6
+ 
+
+
+
+Assignment 3.3:
+
+
+let num = "10";
+
+// Solution One
+console.log(num * ( true + true)); // 20
+
+// Solution Two
+console.log(parseInt(num) + parseInt(num)); // 20
+
+// Solution Three
+console.log(num << true ); // 20
+
+// Solution Four
+console.log(num * true + num * true); // 20	
+
+
+
+Assignment 3.4:
+
+  let points = 10;
+
+        // Write Your Code Here
+
+        console.log(points + true + true + true); // 13
+
+        // Write Your Code Here
+
+        console.log(points - true - true); // 8;
+
+*****************************************************
+Assignment 4.1:
+
+ // Examples
+        console.log(100_000); // 100000
+        console.log(100000); // 100000
+        console.log(5e4 + 5e4); // 100000
+
+        // Your Solutions
+        console.log(1000000 / 10); // 100000
+        console.log(10 * 10000); // 100000
+        console.log(5e4 << true); // 100000
+        console.log(10 ** 5); // 100000
+        console.log(200000 - 100000); // 100000
+        console.log(200000/2); // 100000
+        console.log(); // 100000
+        console.log(); // 100000
+        console.log(); // 100000
+        console.log(); // 100000
+
+
+
+Assignment 4.2:
+
+  console.log(-Number.MIN_SAFE_INTEGER - 1);
+
+
+Assignment 4.3:
+console.log((Number.MAX_SAFE_INTEGER % 16)+1);
+
+
+Assignment 4.7:
+        console.log(Math.floor(Math.random() * 4))
+
+
+
+Assignment 4.2.1:
+
+
+let myVar = "100.56789 Views";
+
+console.log(parseInt(myVar)); // 100
+console.log(parseFloat(myVar).toFixed(2)); // 100.57
+
+
+Assignment: 4.2.2:
+
+  let word = "Elzero";
+        let letterZ = "z";
+        let letterE = "e";
+        let letterO = "O";
+
+        console.log(word.includes(letterZ)); // True
+        console.log(word.startsWith(letterE.toUpperCase())); // True
+        console.log(word.endsWith(letterO.toLowerCase())); // True
+
+
+
+Assignment 5.1:
+
+        console.log(100 == "100"); // true
+        console.log(100 !== 1000); // 
+        console.log(110 != 100 || 10 === 20); // true
+        console.log(-10 == "-10"); // true
+        console.log(-50 != +"-40"); // true
+        console.log(10 != -"-40"); // true
+        console.log("10" == 10); // true
+        console.log(20 !== false); //
+
+Assignment 5.2:
+
+   let num1 = 10;
+        let num2 = 20;
+
+        console.log(num1 !== num2); // true
+        console.log(num1 != num2); // true
+        console.log(num1 !== num2 || true); // true
+        console.log(num1 == num2 ? false : true ); // true
+        console.log(num1 < num2); // true
+        console.log(num2 > num1); // true
+
+
+Assignment 5.3:
+
+
+ let a = 20;
+        let b = 30;
+        let c = 10;
+
+        console.log(a < b && a > c || a == b); // true
+        console.log(a < b > a < c); // true
+        console.log(!(a > b) && !(a == b) &&  !(a < c) && !(a == c)); // true
+
+
+
+
+Assignment 5.4:
+
+   let a = 20;
+        let b = 30;
+        let c = 10;
+
+        console.log(a < b && a > c || a == b); // true
+        console.log(a < b > a < c); // true
+        console.log(!(a > b) && !(a == b) &&  !(a < c) && !(a == c)); // true
+
+
+
+Assignment 5.2.1:
+
+
+   let num = 111;
+
+        if (num < 10) {
+
+            console.log("00" + num);
+        } else if (num > 10 && num < 100) {
+            console.log("0"+num);
+        } else{
+            console.log(num)
+        }
+
+
+Assignment 5.2.2:
+ let num1 = 9;
+        let str = "9";
+        let str2 = "20";
+
+
+
+        if (num1 == str) {
+            console.log(`${num1} Is The Same Value As ${str}`)
+        }
+        if (num1 == str && num1 !== str) {
+
+            console.log(`${num1} Is The Same Value As ${str} but not same type`)
+
+        } if (num1 != str2 && num1 !== str2) {
+            console.log(`${num1} Is not The Same Value As ${str2} and not the same type`)
+        } if (str != str2 && typeof (str2) == typeof (str)) {
+            console.log(`${str} Is not The Same Value As ${str} but same type`)
+        }
+
+
+Assignment 5.2.3:
+
+
+     let num1 = 10;
+        let num2 = 30;
+        let num3 = "30";
+
+        if (num3 > num1 && num3 !== num2)
+            console.log(`${num3} Is Larger Than ${num1} And Type string Not The Same Type As number 2`)
+        else if (num3 > num1 && num3 !== num2 && num2 == num3)
+            console.log(`${num3} Is Larger Than ${num1} And Type string Not The Same Type As number 2 but same value`)
+        else if (num3 !== num1 && num3 !== num1 && num3 !== num2)
+            console.log(`{num3} Value And Type Is Not The Same As {num1} And Type Is Not The Same As {num2}`)
+
+
+Assignment 5.2.4:
+
+
+        let num1 = 10;
+        let num2 = 10;
+        let num3 = "10";
+        let num4 = 20;
+
+        /*
+          Do Not Edit Below This Line
+          Needed Output
+          True 7 Times
+        */
+
+        // Condition 1
+
+        if (num1 >= num2) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 2
+
+        if (num1 > num2 || num1 < num4) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 3
+
+        if (num1 == num2 && num1 !== num3) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 4
+
+        if ((num1 + num2) <= num4) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 5
+
+        if ((num1 + parseInt(num3)) <= num4) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 6
+
+        if ((num1 + num2 +  parseInt(num3)) > num4) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 7
+
+        if (num4 - (num1 +  parseInt(num3)) + num2 === 21) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+
+Assignment 5.3.1:
+
+        // Edit What You Want Here
+        let day = "   tuesday  ";
+        
+    
+        day = day.trim();
+        day = day.charAt(0).toUpperCase() + day.slice(1);
+        console.log(day)
+
+        if (day == "Friday" || day == "Saturday" || day == "Sunday")
+            console.log("No Appointments Available")
+        else if (day == "Monday" || day == "Thursday")
+            console.log("From 10:00 AM To 5:00 PM")
+        else if (day == "Tuesday")
+            console.log("From 10:00 AM To 6:00 PM")
+        else if (day == "Wednesday")
+            console.log("From 10:00 AM To 7:00 PM")
+        else if (day == "World")
+            console.log("Its Not A Valid Day")
+
+
+
+*************************************************
+
+
+Assignment 6.1:
+
+ let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
+        let num = 3;
+
+        // Method 1
+        console.log(myFriends.slice(0,3)); // ["Ahmed", "Elham", "Osama"];
+
+        // Method 2
+        console.log(myFriends.splice(0,3)); // ["Ahmed", "Elham", "Osama"];
+
+
+Asssignment 6.2:
+  let friends = ["Ahmed", "Eman", "Osama", "Gamal"];
+
+        // Write Your Code Here
+
+        console.log(friends.splice(1,2)); // ["Eman", "Osama"]
+
+
+
+
+Assignment 6.3:
+   let arrOne = ["C", "D", "X"];
+        let arrTwo = ["A", "B", "Z"];
+        let finalArr = [];
+
+        // Write One Single Line Of Code
+        
+
+     console.log(finalArr.concat(arrTwo.pop(), arrOne.pop(), arrOne.pop(), arrOne.pop(), arrTwo.pop(), arrTwo.pop())); // ["Z", "X", "D", "C", "B", "A"]	
+
+
+
+
+Assignment 6.4:
+
+      let website = "Go";
+        let words = [`${website}ogle`, "Facebook", ["Elzero", "Web", "School"]];
+
+        let x = words.pop()[0];
+        console.log(x.slice(x.search("z")).toUpperCase()); // ZERO
+
+Assignment 6.5:
+
+   let needle = "JS";
+        let haystack = ["PHP", "JS", "Python"];
+
+        // Write 3 Solutions
+
+        console.log(haystack.includes(needle));
+        haystack.indexOf(needle) !== -1 ? console.log('found') : console.log("Not found")
+
+
+        for (let i = 0; i < haystack.length; i++) {
+            if (haystack[i] === needle) {
+                console.log(`found it at index ${i}`)
+                break;
+
+            }
+          
+        }
+
+
+
+Assignment 6.6:
+
+        let arr1 = ["A", "C", "X"];
+        let arr2 = ["D", "E", "F", "Y"];
+        let allArrs = [];
+
+        
+        console.log(allArrs.concat(arr2[2] , arr1[2], arr2[3]).join("").toLowerCase()); // fxy
+
+
+
+**********************************
+
+
+Assignment 7.1:
+
+let start = 10;
+        let end = 100;
+        let exclude = 40;
+
+        for (start; start <= end;) {
+            if (start != 40)
+                console.log(start)
+
+            start = start + 10;
+        }
+
+
+Assignment 7.2:
+
+let start = 10;
+        let end = 0;
+        let stop = 3;
+
+        for (; start >= end;) {
+            if (start < 10)
+                console.log("0" + start)
+            else
+            console.log(start)
+
+           
+            if (start == 3)
+                break; 
+            start--;
+        }
+
+
+Assignment 7.4:
+
+
+        for (let index = 10 ; index >= 4;) {
+           console.log(index)
+           index = index - 2
+        }
+Assignment 7.5:
+
+ let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
+        let letter = "a";
+
+        let i = 1;
+        friends.forEach(element => {
+
+
+            if (element[0].toLowerCase() != letter) {
+
+                console.log(i++ + " => " + element)
+            }
+
+
+        });
+	
+Assignment 7.6:
+ let i = 0;
+        let swappedName = "elZerO";
+        let result = '';
+
+
+        for (i; i < swappedName.length; i++) {
+
+
+            if (swappedName[i] == swappedName[i].toUpperCase()) {
+
+                result += swappedName[i].toLowerCase();
+
+            }
+
+
+            else {
+                result += swappedName[i].toUpperCase();
+            }
+
+
+        }
+        console.log(result)
+
+
+
+Assignment 7.7:
+   let start = 0;
+        let mix = [1, 2, 3, "A", "B", "C", 4];
+
+
+        for (start; start < mix.length; start++) {
+            if (start == 0)
+                continue;
+           
+            if (!isNaN(mix[start])) {
+                console.log(mix[start])
+            }
+        }
+*****************************************************************************
+
+
+Assignment 8.1:
+  function sayHello(theName, theGender) {
+
+            if (theGender == 'Male')
+                console.log(`Hello Mr. ${theName}`)
+            else if (theGender == 'Female')
+                console.log(`Hello Miss. ${theName}`)
+
+            else {
+                console.log("Hello " + theName)
+            }
+        }
+
+        // Needed Output
+        sayHello("Osama", "Male"); // "Hello Mr Osama"
+        sayHello("Eman", "Female"); // "Hello Miss Eman"
+        sayHello("Sameh"); // "Hello Sameh"
+
+
+Assignment 8.2:
+
+
+        function calculate(firstNum, secondNum, operation) {
+
+            if(firstNum === undefined || secondNum === undefined){
+                console.log("number doesnot exist")
+            }
+
+            if (operation == 'add')
+                console.log(firstNum + secondNum)
+            else if (operation == 'subtract')
+                console.log(firstNum - secondNum)
+            else if (operation == 'multiply')
+                console.log(firstNum * secondNum)
+
+        }
+
+        // Needed Output
+        calculate(20); // Second Number Not Found
+        calculate(20, 30); // 50
+        calculate(20, 30, 'add'); // 50
+        calculate(20, 30, 'subtract'); // -10
+        calculate(20, 30, 'multiply'); // 600
+
+Assignment 8.3:
+
+    function ageInTime(theAge) {
+            // Your Code Here
+
+            if (theAge >= 110 || theAge <= 0) {
+                console.log("Age is out of the range")
+            } else {
+                console.log("Your age in months is " + (12 * theAge))
+                console.log("Your age in weeks is " + (12 * 4 * theAge))
+                console.log("Your age in days is " + (12 * 4 * 24 * theAge))
+                console.log("Your age in hours is " + (12 * 4 * 24 * 24 * theAge))
+                console.log("Your age in minuts is " + (12 * 4 * 24 * 26 * 60 * theAge))
+                console.log("Your age in seconds is " + (12 * 4 * 24 * 26 * 60 * 60 * theAge))
+
+
+
+
+
+
+
+            }
+        }
+
+        // Needed Output
+        ageInTime(110); // Age Out Of Range
+        ageInTime(38); // Months Example => 456 Months	
+
+
+
+Assignment 8.4:
+ function checkStatus(a, b, c) {
+            let age, name, bool;
+            if (typeof (a) == "boolean")
+                bool = a;
+
+            else if (typeof (a) == "number")
+                age = a;
+            else if (typeof (a) == "string")
+                name = a;
+
+            if (typeof (b) == "boolean")
+                bool = b;
+
+            else if (typeof (b) == "number")
+                age = b;
+            else if (typeof (b) == "string")
+                name = b;
+
+            if (typeof (c) == "boolean")
+                bool = c;
+
+            else if (typeof (c) == "number")
+                age = c;
+            else if (typeof (c) == "string")
+                name = c;
+
+
+            if (bool) {
+                console.log(`Hello ${name}, your age is ${age} and you are available for hire`)
+            } else
+                console.log(`Hello ${name}, your age is ${age} and you are not available for hire`)
+            // Your Code Here
+        }
+
+        // Needed Output
+        checkStatus("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+        checkStatus(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+        checkStatus(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+        checkStatus(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+Assignment 8.5:
+
+   function createSelectBox(startYear, endYear) {
+           
+            const select = document.createElement('select');
+            for(let i = startYear; i <= endYear; i++){
+
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent= i
+                select.appendChild(option) 
+            }
+
+            document.body.appendChild(select);
+        }
+        createSelectBox(1999, 2015);
+
+
+
+Assignment 8.6:
+
+ const multiply = (a, b, c) => {
+
+        
+            console.log(parseInt(a) * parseInt(b))
+        }
+        multiply(10, 20); // 200
+        multiply(10, 30); // 300
+        multiply(100.5, 10); // 1000
+
+
+
+*****************************************************
+
+
+Assignment 9.1:
+
+  function getDetails(zName, zAge, zCountry) {
+            function namePattern(zName) {
+                let name = zName.split(" ")
+                
+                
+                let updatedName = name[0] + " " + name[1][0].toUpperCase() + ". ";
+
+                return updatedName;
+            }
+            function ageWithMessage(zAge) {
+
+
+                return "Your age is " + zAge[0] + zAge[1];
+            }
+            function countryTwoLetters(zCountry) {
+
+                const short = zCountry[0].toUpperCase() + zCountry[1].toUpperCase();
+                return short;
+
+            }
+            function fullDetails() {
+                return "Hello, " + namePattern(zName) + " " + ageWithMessage(zAge) + ", And you live in " + countryTwoLetters(zCountry)
+            }
+            return fullDetails(); // Do Not Edit This
+        }
+
+        console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
+        // Hello Osama M., Your Age Is 38, You Live In EG
+
+        console.log(getDetails("Ahmed ali", "32 Is The Age", "Syria"));
+        // Hello Ahmed A., Your Age Is 32, You Live In SY
+
+
+Assignment 9.2:
+
+ const itsMe = () => {
+            return `Iam A Normal Function`;
+        }
+
+        console.log(itsMe()); // Iam A Normal Function
+
+
+
+Assignment 9.3:
+const checker = (zName) => {
+            return (status) => {
+                return (salary) => {
+                    return status === "Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
+                };
+            };
+        }
+
+        console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
+        console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
+
+
+
+
+Assignment 9.4:
+
+ function specialMix(...data) {
+            let sum = 0;
+            let allStrings = true;
+
+            for (let i = 0; i < data.length; i++) {
+                if (typeof data[i] === 'number') {
+                    sum += data[i];
+                    allStrings = false;
+                } else if (typeof data[i] === 'string') {
+                    // Extract numbers from the beginning of the string
+                    const num = parseInt(data[i]);
+                    if (!isNaN(num)) {
+                        sum += num;
+                        allStrings = false;
+                    }
+                }
+            }
+
+            if (allStrings) {
+                console.log("All Is Strings");
+            } else {
+                console.log(sum);
+            }
+        }
+        console.log(specialMix(10, 20, 30)); // Output: 60
+        console.log(specialMix("10Test", "Testing", "20Cool")); // Output: 30
+        console.log(specialMix("Testing", "10Testing", "40Cool")); // Output: 50
+        console.log(specialMix("Test", "Cool", "Test")); // Output: All Is Strings
+
+**************************************************
+
+Assignment 10.1:
+
+        let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
+
+        const updtdArray = [];
+        mix.map(
+            (v) =>{
+
+             if(typeof v !== 'number')
+             updtdArray.push(v);
+            }
+        )
+
+
+        console.log(updtdArray)
+
+
+Assignment 10.2:
+
+let myString = "EElllzzzzzzzeroo";
+        let x = myString.split("");
+
+        let newS = "";
+        x.filter(
+            (v) => {
+
+                if (newS.search(v) == -1) {
+                    newS = newS + v
+
+                }
+            }
+        )
+        console.log(newS)
+        // Elzero
+        // Elzero
+
+
+Assignment 10.3:
+
+        let myArray = ["E", "l", "z", ["e", "r"], "o"];
+
+        let result = myArray.reduce((acc, current) => {
+            return acc.concat(Array.isArray(current) ? current : [current]);
+        }, []).join('');
+
+        console.log(result); // Elzero
+
+
+
+Assignment 10.4:
+
+ let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
+
+        let result = numsAndStrings
+            .filter(item => typeof item === 'number') 
+            .map(number => -number);                
+
+        console.log(result); // [-1, -10, 10, 20, -5, -3]
+
+
+
+Assignment 10.5:
+
+  let nums = [2, 12, 11, 5, 10, 1, 99];
+
+        let result = nums.reduce((acc, current) => {
+            if (current % 2 === 0) {
+                return acc * current;
+            } else {
+                return acc + current;
+            }
+        }, 1);
+        console.log(result); // 500
+****************************************************************************************
+
+
+Assignment 11.1:
+
+    const member = { name: "Elzero", age: 38, country: "Egypt", fullDetails: function(){ 
+            console.log(`My Name Is ${this.name}, My Age Is ${this.age}, I live in ${this.country}`)
+        } }
+
+        console.log(member.name); // Elzero
+        console.log(member.age); // 38
+        console.log(member.country); // Egypt
+        console.log(member.fullDetails());
+        // My Name Is Elzero, My Age Is 38, I Live in Egypt
+
+
+Assignment 11.2:
+       // Method One
+        // Create Your Object Here
+
+        const objMethodOne = {property:"obj one"}
+
+        console.log(objMethodOne.property); // "Method One"
+
+        // Method Two
+        // Create Your Object Here
+        const objMethodTwo = new Object({property:"obj two"})
+
+        console.log(objMethodTwo.property); // "Method Two"
+
+        // Method Three
+        // Create Your Object Here
+        const objMethodThree =  Object.create({property: " Obj three"})
+
+        console.log(objMethodThree.property); // "Method Three"
+
+        // Method Four
+        // Create Your Object Here
+        const objMethodFour =  Object.assign({property:"obj four"})
+
+        console.log(objMethodFour.property); // "Method Four"
+
+
+
+Assignment 11.3:
+
+
+  let a = 1;
+        let threeNums = {
+            b: 2,
+            c: 3,
+            d: 4,
+        };
+
+        let twoNums = {
+            e: 5,
+            f: 6,
+        };
+
+        // Create Your Object Here in One Line
+
+        const finalObject = Object.assign({a:a}, threeNums, twoNums)
+
+        console.log(finalObject);
+
+        /*
+          a: 1
+          b: 2
+          c: 3
+          d: 4
+          e: 5
+          f: 6
+        */
+
+
+Assignment 11.4:
+
+
+
+   // The Object To Work With
+        let myFavGames = {
+            "Trinity Universe": {
+                publisher: "NIS America",
+                price: 40,
+            },
+            "Titan Quest": {
+                publisher: "THQ",
+                bestThree: {
+                    one: "Immortal Throne",
+                    two: "Ragnarök",
+                    three: "Atlantis",
+                },
+                price: 50,
+            },
+            YS: {
+                publisher: "Falcom",
+                bestThree: {
+                    one: "Oath in Felghana",
+                    two: "Ark Of Napishtim",
+                    three: "origin",
+                },
+                price: 40,
+            },
+        };
+
+        // Code One => How To Get Object Length ?
+        let objectLength = Object.keys(myFavGames).length;
+
+
+        for (let i = 0; i < objectLength; i++) {
+            console.log(`The Game Name Is ${Object.keys(myFavGames)[i]}`);
+            console.log(`The Publisher Is ${myFavGames[Object.keys(myFavGames)[i]]['publisher']}`);
+            console.log(`The Price Is ${myFavGames[Object.keys(myFavGames)[i]]['price']}`);
+
+            // Check If Nested Object Has Property (bestThree)
+            if (typeof myFavGames[Object.keys(myFavGames)[i]]['bestThree'] !== 'undefined') {
+                console.log("- Game Has Releases");
+                console.log(`First => ${myFavGames[Object.keys(myFavGames)[i]]['bestThree']['one']}`);
+                console.log(`Second =>  ${myFavGames[Object.keys(myFavGames)[i]]['bestThree']['two']}`);
+                console.log(`Third =>  ${myFavGames[Object.keys(myFavGames)[i]]['bestThree']['three']}`);
+            }
+            console.log("#".repeat(20));
+        }
+
+        // Ouput
+
+        "The Game Name Is Trinity Universe"
+        "The Publisher Is NIS America"
+        "The Price Is 40"
+        "####################"
+        "The Game Name Is Titan Quest"
+        "The Publisher Is THQ"
+        "The Price Is 50"
+        "- Game Has Releases"
+        "First => Immortal Throne"
+        "Second => Ragnarök"
+        "Third => Atlantis"
+        "####################"
+        "The Game Name Is YS"
+        "The Publisher Is Falcom"
+        "The Price Is 40"
+        "- Game Has Releases"
+        "First => Oath in Felghana"
+        "Second => Ark Of Napishtim"
+        "Third => origin"
+        "####################"
+********************************************************************************************
+
+Assignment 12.1:
+ const firstMethod = document.getElementById('elzero');
+        const secondMethod = document.getElementsByClassName('element');
+        const thirdMethod = document.getElementsByName('js');
+        const fourthMethod = document.getElementsByTagName('div');
+        const fifethMetho = document.querySelector('.element')
+        const sixthMethod = document.querySelector('div')
+        const method_7 = document.querySelector('#elzero')
+        const method_8 = document.querySelector('[name="js"]')
+        const method_9 = document.querySelectorAll('[name="js"]')
+        const method_10 = document.querySelectorAll('div')
+        const method_11 = document.querySelectorAll('#elzero')
+        const method_12 = document.querySelectorAll('.element')
+
+       
+ method_12[0].innerHTML = 'hi'
+
+
+
+
+Assignment 12.2:
+
+ <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+        <img decoding="async" src="#" alt="" />
+    </div>
+    <script>
+
+
+        const element = document.querySelectorAll('[decoding="async"]')
+
+        element.forEach((value) => {
+            value.setAttribute('src', 'https://elzero.org/wp-content/themes/elzero/imgs/logo.png')
+
+            console.log(value.getAttribute('src'))
+        })
+
+
+
+Assignment 12.3:
+
+ <form action="">
+        <input  type="number" name="dollar" placeholder="USD Dollar" />
+        <div class="result">{0} USD Dollar = {0} Egyptian Pound</div>
+    </form>
+    <script>
+
+        const traslateDollarToEgptionCurrency = (dollarAmount) => {
+
+            const element = document.querySelector('.result');
+            let result = 0;
+            result = dollarAmount * 15.6
+            element.innerHTML = `${dollarAmount}$ =  ${result.toFixed(2)}EP`
+        }
+
+        const field1 = document.querySelector('[name = "dollar"]');
+        field1.addEventListener('change', (event) => {
+            traslateDollarToEgptionCurrency(event.target.value)
+        })
+
+
+Assignment 12.4:
+
+        const e1 = document.querySelector('.one');
+        const e2 = document.querySelector('.two');
+
+        const tempContent = e1.textContent;
+        const tempTitle = e1.getAttribute('title');
+
+        e1.textContent = e2.textContent + 2;
+        e1.setAttribute('title', e2.getAttribute('title'));
+
+        e2.textContent = tempContent;
+        e2.setAttribute('title', tempTitle);
+
+
+
+Assignment 12.5:
+
+    <img decoding="async" src="#" alt="One" />
+    <img decoding="async" src="#" />
+    <img decoding="async" src="#" alt="Three" />
+    <img decoding="async" src="#" />
+    <img decoding="async" src="#" />
+    <script>
+
+
+
+
+        const images = document.querySelectorAll('[decoding="async"]');
+
+        images.forEach((element) => {
+
+            if (element.getAttribute('alt') != null) {
+
+                element.setAttribute('alt', 'old')
+
+            } else
+                element.setAttribute('alt', ' Elzero New')
+
+        })
+
+
+
+    </script>
+
+
+
+
+Assignment 12.6: 
+
+<input type="number" name="elements" class="input" placeholder="Number Of Elements" />
+    <input type="text" name="texts" class="input" placeholder="Elements Text" />
+    <select name="type" class="input">
+        <option value="Div">Div</option>
+        <option value="Section">Section</option>
+    </select>
+    <input type="submit" name="create" value="Create" />
+    <div class="results"></div>
+
+    <script>
+
+
+        const eNum = document.querySelector('[name="elements"]');
+        const content = document.querySelector('[name="texts"]');
+        const selectVal = document.querySelector('select');
+        const btn = document.querySelector('[name="create"]');
+        const result = document.querySelector('.results');
+
+
+
+
+        btn.addEventListener('click',
+            (value) => {
+                let res;
+                for (let i = 0; i < eNum.value; i++) {
+
+                    res = res + `<${selectVal.value}> ${content.value}</${selectVal.value}>`
+                }
+
+                result.append(res)
+            }
+        )
+
+    </script>
+
+************************************************************************************************
+
+
+Assignment 13.3:
+
+
+  <div class="our-element">Our Element</div>
+    <p>Paragraph</p>
+    <script>
+        const pChild = document.getElementsByTagName('p');
+
+        pChild[0].remove();
+
+        const ourElement = document.querySelector('.our-element');
+
+
+        const startElement = document.createElement('div');
+        startElement.className = 'start';
+        startElement.setAttribute('title', 'Start Element');
+        startElement.setAttribute('data-value', 'Start');
+        startElement.textContent = 'Start';
+
+
+        const endElement = document.createElement('div');
+        endElement.className = 'end';
+        endElement.setAttribute('title', 'End Element');
+        endElement.setAttribute('data-value', 'End');
+        endElement.textContent = 'End';
+
+
+        ourElement.before(startElement);
+        ourElement.after(endElement)
+
+    </script>
+
+
+Assignment 13.4:
+
+
+	  <div>
+        <span>Hello</span>
+        <!-- We Need The Next Text Without Spaces -->
+        Elzero
+    </div>
+    <script>
+
+        const divElement = document.querySelector('div');
+        const textInsideDiv = divElement.childNodes[4]
+        console.log(textInsideDiv.textContent.trim());
+
+Assignment 13.5:
+    <div>Element</div>
+    <span>Element</span>
+    <p>Element</p>
+    <article>Element</article>
+    <section>Element</section>
+    <script>
+
+        const elements = document.querySelectorAll('*');
+
+        elements.forEach((value) =>{
+            if(value.textContent == 'Element'){
+                console.log( value.nodeName)
+            }
+        })
+
+    </script>
+*************************************************************************************************
+
+
+
+14.1:
+
+
+     let num = prompt("Enter the numbers in this format {number - number}");
+
+        let numbers = num.split(" ").filter(n => n !== '-').map(Number);
+
+        let theSmall = 0, theBig = 0;
+
+        if (numbers[0] <= numbers[1]) {
+            theSmall = numbers[0];
+            theBig = numbers[1];
+        } else {
+            theSmall = numbers[1];
+            theBig = numbers[0];
+        }
+
+        for (; theSmall <= theBig; theSmall++) {
+            console.log(theSmall);
+        }
+
+
+
+14.2:
+
+setTimeout(()=>{
+    window.alert("Welcome")
+   } , 5000)
+
+
+Assignment 14.3:
+
+ <div id="hi">10</div>
+
+    <script>
+
+        const timer = document.getElementById('hi')
+        let num = 10;
+        setInterval(
+            () => {
+                if (num == 0) {
+                     clearInterval(0)
+                    console.log("time finiseh") }
+                else timer.innerHTML = num--
+            }, 1000
+        )
+
+
+    </script>
+
+
+Assignment 14.4
+
+
+    <div id="hi">10</div>
+
+    <script>
+
+        const timer = document.getElementById('hi')
+        let num =10;
+       let interval = setInterval(
+            () => {
+                if (num == 0) {
+                    clearInterval(interval)
+                    window.open('https://www.google.com', '_blank')
+                }
+                else timer.innerHTML = num--
+            }, 1000
+        )
+
+
+    </script>
+
+
+Assignment 14.5:
+
+
+    <div id="hi">10</div>
+
+    <script>
+
+        const timer = document.getElementById('hi')
+        let num = 10;
+        let interval = setInterval(
+            () => {
+                if (num == 5) {
+
+                    window.open('https://www.google.com', '_blank')
+                } else if (num == 0)
+                    clearInterval(interval)
+                timer.innerHTML = num--
+            }, 1000
+        )
+
+
+    </script>
+
+***********************************************************************************************
+
+Assignment 15.1:
+
+  <div>
+            <label for="font-select">Choose font</label>
+            <select id="font-select">
+                <option value="'Open Sans', sans-serif">Open</option>
+                <option value="'Cairo', sans-serif">Cairo</option>
+                <option value="'Roboto', sans-serif">Roboto</option>
+            </select>
+        </div>
+    
+        <div>
+            <label for="color-select">choose color</label>
+            <select id="color-select">
+                <option value="#000000">أسود</option>
+                <option value="#ff0000">أحمر</option>
+                <option value="#00ff00">أخضر</option>
+                <option value="#0000ff">أزرق</option>
+                <option value="#ffff00">أصفر</option>
+                <option value="#ff00ff">وردي</option>
+            </select>
+        </div>
+    
+        <div>
+            <label for="size-select">choose font size</label>
+            <select id="size-select">
+                <option value="16px">16px</option>
+                <option value="17px">17px</option>
+                <option value="18px">18px</option>
+                <option value="19px">19px</option>
+                <option value="20px">20px</option>
+                <option value="21px">21px</option>
+                <option value="22px">22px</option>
+                <option value="23px">23px</option>
+                <option value="24px">24px</option>
+                <option value="25px">25px</option>
+                <option value="26px">26px</option>
+                <option value="27px">27px</option>
+                <option value="28px">28px</option>
+                <option value="29px">29px</option>
+                <option value="30px">30px</option>
+            </select>
+        </div>
+    
+        <script>
+            
+            window.onload = function() {
+                const savedFont = localStorage.getItem('font');
+                const savedColor = localStorage.getItem('color');
+                const savedSize = localStorage.getItem('size');
+                
+                if (savedFont) {
+                    document.body.style.fontFamily = savedFont;
+                    document.getElementById('font-select').value = savedFont;
+                }
+                
+                if (savedColor) {
+                    document.body.style.color = savedColor;
+                    document.getElementById('color-select').value = savedColor;
+                }
+    
+                if (savedSize) {
+                    document.body.style.fontSize = savedSize;
+                    document.getElementById('size-select').value = savedSize;
+                }
+            };
+    
+            
+            document.getElementById('font-select').addEventListener('change', function() {
+                const selectedFont = this.value;
+                document.body.style.fontFamily = selectedFont;
+                localStorage.setItem('font', selectedFont);
+            });
+    
+            document.getElementById('color-select').addEventListener('change', function() {
+                const selectedColor = this.value;
+                document.body.style.color = selectedColor;
+                localStorage.setItem('color', selectedColor);
+            });
+    
+            document.getElementById('size-select').addEventListener('change', function() {
+                const selectedSize = this.value;
+                document.body.style.fontSize = selectedSize;
+                localStorage.setItem('size', selectedSize);
+            });
+        </script>
+
+
+Assignment 15.2:
+
+ <form id="myForm">
+            <div>
+                <label for="in1">Name:</label>
+                <input type="text" id="in1" name="in1">
+            </div>
+            <div>
+                <label for="in2">email:</label>
+                <input type="email" id="in2" name="in2">
+            </div>
+            <div>
+                <label for="in3">age:</label>
+                <input type="number" id="in3" name="in3">
+            </div>
+            <div>
+                <label for="selectBox">select one:</label>
+                <select id="selectBox" name="selectBox">
+                    <option value="option1">Elzero</option>
+                    <option value="option2">Sultan</option>
+                    <option value="option3">Nazeeh</option>
+
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+
+            window.onload = function () {
+                const in1 = document.getElementById('in1');
+                const in2 = document.getElementById('in2');
+                const in3 = document.getElementById('in3');
+                const selectBox = document.getElementById('selectBox');
+
+                if (sessionStorage.getItem('in1')) {
+                    in1.value = sessionStorage.getItem('in1');
+                }
+                if (sessionStorage.getItem('in2')) {
+                    in2.value = sessionStorage.getItem('in2');
+                }
+                if (sessionStorage.getItem('in3')) {
+                    in3.value = sessionStorage.getItem('in3');
+                }
+                if (sessionStorage.getItem('selectBox')) {
+                    selectBox.value = sessionStorage.getItem('selectBox');
+                }
+
+                in1.addEventListener('input', function () {
+                    sessionStorage.setItem('in1', in1.value);
+                });
+                in2.addEventListener('input', function () {
+                    sessionStorage.setItem('in2', in2.value);
+                });
+                in3.addEventListener('input', function () {
+                    sessionStorage.setItem('in3', in3.value);
+                });
+                selectBox.addEventListener('change', function () {
+                    sessionStorage.setItem('selectBox', selectBox.value);
+                });
+
+                window.addEventListener('beforeunload', function () {
+                    sessionStorage.removeItem('in1');
+                    sessionStorage.removeItem('in2');
+                    sessionStorage.removeItem('in3');
+                    sessionStorage.removeItem('selectBox');
+                });
+            };
+
+
+        </script>
+
+
+****************************************************************************************************
+
+
+
+assignment 16.1:
+
+   let myNumbers = [1, 2, 3, 4, 5];
+
+            // Write Your Destructuring Assignment Here
+            let [a, , , , e] = myNumbers;
+
+            console.log(a * e); // 5
+
+
+Assignment 16.2:
+
+           let mySkills = ["HTML", "CSS", "JavaScript", ["PHP", "Python", ["Django", "Laravel"]]];
+
+            // Write Your Destructuring Assignment Here
+            let [a, b, c, [d, e, [f, g]]] = mySkills;
+
+            console.log(`My Skills: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}`);
+
+            // My Skills: HTML, CSS, JavaScript, PHP, Python, Django, Laravel
+
+Assignment 16.3:;
+
+    let arr1 = ["Ahmed", "Sameh", "Sayed"];
+            let arr2 = ["Mohamed", "Gamal", "Amir"];
+            let arr3 = ["Haytham", "Shady", "Mahmoud"];
+
+            // Play With Arrays To Prepare For Destructuring
+            let combinedArray = [arr3[1], arr3[2], arr1[0]];
+
+            // Write Your Destructuring Assignment Here
+            let [a, b, c] = combinedArray;
+
+            console.log(`My Best Friends: ${a}, ${b}, ${c}`);
+
+            // My Best Friends: Shady, Mahmoud, Ahmed
+
+
+Assignment 16.4:
+
+const member = {
+                age: 30,
+                working: false,
+                country: "Egypt",
+                hobbies: ["Reading", "Swimming", "Programming"],
+            };
+
+            // Write Your Destructuring Assignment Here
+            const { age: a, working: w, country: c, hobbies: [h1, , h3] } = member;
+
+            console.log(`My Age Is ${a} And Iam ${w ? "" : "Not"} Working`);
+            // My Age Is 30 And Iam Not Working
+
+            console.log(`I Live in ${c}`);
+            // I Live in Egypt
+
+            console.log(`My Hobbies: ${h1} And ${h3}`);
+            // My Hobbies: Reading And Programming
+
+
+Assignment 16.5:
+
+
+Assignment 16.6:
+
+ let chosen = 1;
+
+            let myFriends = [
+                { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+                { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+                { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+            ];
+
+            // Write Your Code Here
+            let { title, age, available, skills: [, lastSkill] } = myFriends[chosen - 1];
+
+            console.log(title);
+            console.log(age);
+            console.log(available ? "Available" : "Not Available");
+            console.log(lastSkill);
+            
+************************************************************************************************
+
+Assignment 17.1:
+
+  let setOfNumbers = new Set([10]);
+
+            
+            setOfNumbers.add(20).add(setOfNumbers.size);
+
+           
+            console.log(setOfNumbers);
+
+           
+            console.log([...setOfNumbers][setOfNumbers.size - 1]);
+
+
+Assignment 17.2:
+
+
+let myFriends = ["Osama", "Ahmed", "Sayed", "Sayed", "Mahmoud", "Osama"];
+            console.log([...new Set(myFriends)].sort());
+
+
+Assignment 17.3:
+
+  let myInfo = {
+                username: "Osama",
+                role: "Admin",
+                country: "Egypt",
+            };
+
+   
+            let myInfoMap = new Map(Object.entries(myInfo));
+
+            console.log(myInfoMap);
+
+            
+            console.log(myInfoMap.size);
+
+            
+            console.log(myInfoMap.has('role'));
+
+Assignment 17.4:
+
+            let theNumber = 100020003000;
+            console.log(Number([...new Set(theNumber.toString())].sort().join('')));
+
+Assignment 17.5:
+
+
+  let theName = "Elzero";
+            let array1 = theName.split('');
+            console.log(array1); 
+
+
+
+            let array2 = Array.from(theName);
+            console.log(array2); 
+
+            let array3 = [...theName];
+            console.log(array3); 
+
+
+
+            let array4 = Object.assign([], theName);
+            console.log(array4); 
+
+
+Assignment 17.6:
+
+
+
+Assignment 17.7:
+
+ let numsOne = [1, 2, 3];
+            let numsTwo = [4, 5, 6];
+
+            let combinedArray1 = numsOne.concat(numsTwo);
+            console.log(combinedArray1);
+
+
+
+            let combinedArray2 = [...numsOne, ...numsTwo];
+            console.log(combinedArray2); 
+
+
+
+            let combinedArray3 = [...numsOne];
+            Array.prototype.push.apply(combinedArray3, numsTwo);
+            console.log(combinedArray3);
+
+
+Assignment 17.8:
+
+
+*************************************************************************************************
+
+
+
+Assignment 18.1:
+
+
+ let ip = "2001:db8:3333:4444:5555:6666:7777:8888";
+            let pattern = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$/; // this  pattern for ipv4 not ipv6
+            console.log(pattern.test(ip)); 
+
+
+
+Assignment 18.2:
+
+ let specialNames = "Os10O OsO Os100O Osa100O Os1000 Os100m";
+            let pattern = /\bOs\w*O\b/g;
+
+            let matchedNames = specialNames.match(pattern);
+            console.log(matchedNames); // ['Os10O', 'OsO', 'Os100O']
+
+
+Assignmet 18.3:
+
+ let phone = "+(995)-123 (4567)";
+            let pattern = /^\+\(\d{3}\)-\d{3} \(\d{4}\)$/;
+
+            let isMatch = pattern.test(phone);
+            console.log(isMatch);
+
+Assignment 18.4:
+
+  let re = /https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
+            
+
+            //this regular expression is for checking URLs.
+            //at first check if it match https or http by [https?] and last charact is : for this pattern
+            // then [\/\/] to match the back slashes inside URLs
+            //\w matches any character
+            // this [([-\w]+)] matches domain
+            // at end /i matches all chars either capital or small
+
+
+Assignment 18.5:
+
+
+
+            let date1 = "25/10/1982";
+            let date2 = "25 - 10 - 1982";
+            let date3 = "25 10 1982";
+            let date4 = "25 10 82";
+
+            let re = /^(\d{1,2})[- \/](\d{1,2})[- \/](\d{2}|\d{4})$/; // Write Pattern Here
+
+
+            console.log(date1.match(re)); // "25/10/1982"
+            console.log(date2.match(re)); // "25 - 10 - 1982"
+            console.log(date3.match(re)); // "25 10 1982"
+            console.log(date4.match(re)); // "25 10 82"
+
+
+************************************************************************************************
+
+Assignment 19.1:
+
+
+ class Car {
+                constructor(name, model, price) {
+                    this.n = name;
+                    this.m = model;
+                    this.p = price;
+                }
+
+
+                printCarDetails(params) {
+                    console.log(`Car one Name is ${this.n} and model is ${this.m} and price is ${this.p}`);
+                }
+
+                run(){
+                    console.log("Car is running now")
+
+                }
+                stop(){
+                    console.log("car is off now")
+                }
+            }
+
+            const carOne = new Car("BMW", "2021", "45000$")
+            const carTwo = new Car("Toyota", "2011", "10000$$")
+            const carThree = new Car("MG", "2024", "30000$")
+
+
+            carOne.printCarDetails();
+            carOne.run();
+
+
+Assignment 19.2:
+
+
+  class Phone {
+                constructor(name, serial, price) {
+                    this.name = name;
+                    this.serial = serial;
+                    this.price = price;
+                }
+            }
+
+            // Write Tablet Class Here
+            class Tablet extends Phone {
+
+                constructor(name , serial , price , size) {
+                    super(name, serial, price)
+                    this.size = size
+
+                }
+
+                fullDetails(){
+                    console.log(`name ${this.name}, serial= ${this.serial}, price= ${this.price}, and size= ${this.size ? "unkown" : this.price}`)
+                }
+
+            }
+
+            let TabletOne = new Tablet("iPad", 100200300, 1500, 12.9);
+            let TabletTwo = new Tablet("Nokia", 350450650, 800, 10.5);
+            let TabletThree = new Tablet("LG", 250450650, 650);
+
+            console.log(`${TabletOne.fullDetails()}`);
+            // iPad Serial is 100200300 And Size Is 12.9
+
+            console.log(`${TabletTwo.fullDetails()}`);
+            // Nokia Serial is 350450650 And Size Is 10.5
+
+            console.log(`${TabletThree.fullDetails()}`);
+            // LG Serial is 250450650 And Size Is Unknown
+
+Assignment 19.3:
+
+Assignment 19.4:
+
+ // Write Your Code Here
+            String.prototype.addLove = function () {
+                return `I Love ${this} Web School`;
+            };
+
+            // Do Not Edit Below
+            let myStr = "Elzero";
+            console.log(myStr.addLove()); // I Love Elzero Web School
+
+
+Assignment 19.5:
+
+************************************************************************************************
+
+Assignment 20.1:
+
+let birthDate = new Date("1998-04-10");let now = new Date();
+
+let diffInMilliseconds = now - birthDate;
+
+let seconds = Math.floor(diffInMilliseconds / 1000);
+console.log(`${seconds} Seconds`);
+
+let minutes = Math.floor(seconds / 60);
+console.log(`${minutes} Minutes`);
+
+let hours = Math.floor(minutes / 60);
+console.log(`${hours} Hours`);
+
+let days = Math.floor(hours / 24);
+console.log(`${days} Days`);
+
+let months = Math.floor(days / 30.44);
+console.log(`${months} Months`);
+
+let years = Math.floor(days / 365.25);
+console.log(`${years} Years`);
+
+
+
+Assignment 20.2
+
+   let startDate = new Date(1970, 0, 1, 0, 0, 0);
+            startDate.setFullYear(startDate.getFullYear() + 10);
+            startDate.setSeconds(startDate.getSeconds() + 1);
+
+            console.log(startDate.toString());
+
+
+Assignment 20.3:
+
+
+let now = new Date();
+let lastDayOfPrevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+
+console.log(lastDayOfPrevMonth.toString());
+
+let previousMonthName = lastDayOfPrevMonth.toLocaleString('default', { month: 'long' });
+let lastDay = lastDayOfPrevMonth.getDate();
+
+console.log(`Previous Month Is ${previousMonthName} And Last Day Is ${lastDay}`);
+
+
+
+Assignment 20.4:
+
+// Method 1: Using String Date
+let birthDate1 = new Date("1982-10-25T00:00:00+02:00");
+console.log(birthDate1.toString());
+
+// Method 2: Using Date Components
+let birthDate2 = new Date(1982, 9, 25, 0, 0, 0);
+birthDate2.setHours(birthDate2.getHours() - (birthDate2.getTimezoneOffset() / 60) + 2);
+console.log(birthDate2.toString());
+
+// Method 3: Using UTC Components
+let birthDate3 = new Date(Date.UTC(1982, 9, 24, 22, 0, 0));
+birthDate3.setHours(birthDate3.getHours() + 2);
+console.log(birthDate3.toString());
+
+Assignment 20.5:
+
+
+  let startTime = performance.now();
+
+            for (let i = 1; i <= 99999; i++) {
+                console.log(i);
+            }
+
+            let endTime = performance.now();
+            let timeTaken = Math.floor(endTime - startTime);
+
+            console.log(`Loop Took ${timeTaken} Milliseconds.`);
+
+
+Assignment 20.6:
+
+
+Assignment 20.7
+Assignment 20.8
+
+*************************************************************************************************
+Assignment 21.1:
+[
+    
+    {
+        "id": "100",
+        "authorName": "Sultan",
+        "department": "IT",
+        "content": "Here is the content",
+        "articleTitla": "Here is the article title"
+    },
+    {
+        "id": "101",
+        "authorName": "Fahad",
+        "department": "audit",
+        "content": "Here is the content",
+        "articleTitla": "Here is the article title"
+    },
+    {
+        "id": "102",
+        "authorName": "Abdullah",
+        "department": "Finance",
+        "content": "Here is the content",
+        "articleTitla": "Here is the article title"
+    },
+    {
+        "id": "103",
+        "authorName": "Nasser",
+        "department": "audit",
+        "content": "Here is the content",
+        "articleTitla": "Here is the article title"
+    },
+    {
+        "id": "103",
+        "authorName": "Sultan",
+        "department": "HR",
+        "content": "Here is the content",
+        "articleTitla": "Here is the article title"
+    }
+]
+
+
+
+Assignment 21.2:
+
+  async function fetchJson() {
+            try {
+                const response = await fetch('./JSON/articles.json');
+                const data = await response.json();
+                console.log(data);
+                return data;
+            } catch (error) {
+                console.error('Error fetching the JSON file:', error);
+            }
+        }
+
+        fetchJson().then(objects => {
+            console.log(objects);
+            // Do something with the objects
+        });
+
+*****************************************************************
+Assignment 22.2:
+
+
+        async function getData() {
+
+            try {
+                const response = await fetch("./JSON/articles.json")
+                const data = await response.json();
+
+
+
+                return data;
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+getData().then(res => {
+    let i = 0;
+    let div = document.createElement('div');
+    res.forEach(element => {
+        if (i < 5) {
+            const h3 = document.createElement('h3');
+            h3.innerHTML = element["title"];
+            const p = document.createElement('p');
+            p.innerHTML = element["description"];
+
+            div.appendChild(h3);
+            div.appendChild(p);
+            console.log(element);
+            i++;
+        }
+    });
+    document.getElementById('d').appendChild(div);
+});
