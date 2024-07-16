@@ -1,0 +1,46 @@
+<div class="advsection">
+  <div class="container">
+
+
+    <div class="text-content">
+
+      <h1>
+        Welcome to our, Shop!!
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ipsam tempora qui pariatur velit modi doloremque
+        sunt molestiae, quas alias sit deleniti, beatae, quam perferendis aspernatur laborum conseq atur a. Quisquam.
+      </p>
+      <button [hidden]="isLogin" routerLink="/login" class="my-2">
+        Login
+      </button>
+      <button [hidden]="isLogin" routerLink="/registation">
+        Register Now!
+      </button>
+
+
+    </div>
+    <div class="image">
+
+      <img src="assets/images/slider-img.png" alt="">
+    </div>
+
+    <!-- products -->
+
+  </div>
+
+</div>
+
+<div class="product-list">
+
+
+  <div class="product" *ngFor="let product of products">
+
+    <img width="" [src]="product.pictureUrl" alt="{{ product.name }}" />
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>{{ product.price }}</p>
+    <button>Add to cart</button>
+
+  </div>
+</div>

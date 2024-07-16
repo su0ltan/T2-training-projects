@@ -1,0 +1,42 @@
+<div class="registation">
+
+
+
+  <div class="container">
+
+    <h1>
+
+    </h1>
+
+    <h4>
+      Register now
+    </h4>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+      <label for="firstName">First Name</label>
+      <input id="firstName" formControlName="firstName" required>
+
+
+      <label for="lastName">Last Name</label>
+      <input id="lastName" formControlName="lastName" required>
+
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" required>
+
+      <button type="submit">Save</button>
+      <p>Have an account? <a href="" routerLink="/login">Login</a></p>
+    </form>
+
+
+
+
+
+  </div>
+
+
+
+</div>

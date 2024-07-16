@@ -1,0 +1,77 @@
+.advsection {
+  width: 100%;
+  background-color: #0099e6;
+  padding: 20px;
+}
+.advsection .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 80vh;
+}
+
+.advsection .container .text-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.advsection .container .text-content button {
+  width: 40%;
+  border-radius: 5px;
+  background-color: #0099e6;
+  padding: 15px;
+  font-weight: bold;
+  border: 1px solid white;
+  color: white;
+}
+.advsection .container .text-content button:hover {
+  background-color: white;
+  color: #0099e6;
+}
+.advsection .container .image {
+  height: 100%;
+}
+.advsection .container .image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* start products */
+
+.product-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  box-sizing: border-box;
+  width: calc(33% - 20px);
+}
+
+.product img {
+  max-width: 200px;
+  border-radius: 8px;
+}
+.product button {
+  width: 40%;
+  border-radius: 5px;
+  background-color: #0099e6;
+  padding: 15px;
+  font-weight: bold;
+  border: 1px solid #0099e6;
+  color: white;
+}
+.product button:hover {
+  background-color: white;
+  color: #0099e6;
+}
