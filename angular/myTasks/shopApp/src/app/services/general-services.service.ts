@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GeneralServicesService {
+  constructor() {}
 
-  constructor() { }
+  alert(message: any) {
+    this.alert(message);
+  }
 }

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { GeneralServicesService } from './general-services.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {}
+  constructor(private authGlobalservices: GeneralServicesService) {}
   userData = localStorage.getItem('registrationData');
   isLogin() {
     if (this.userData) return true;
@@ -16,7 +17,7 @@ export class AuthService {
 
   setUserData(userData: any) {
     localStorage.setItem('registrationData', JSON.stringify(userData));
-    alert('Registration data saved successfully!');
+    this.authGlobalservices.alert('Registration data saved successfully!');
   }
 
   logout() {
