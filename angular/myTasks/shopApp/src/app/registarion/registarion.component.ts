@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormGroup,
@@ -7,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { HeaderComponent } from '../components/header/header.component';
 @Component({
   selector: 'app-registarion',
   standalone: true,
@@ -17,7 +19,11 @@ import { Router, RouterModule } from '@angular/router';
 export class RegistarionComponent implements OnInit {
   registrationForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private authService: AuthService
+  ) {
     this.registrationForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -25,21 +31,13 @@ export class RegistarionComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
-  ngOnInit(): void {
-    this.loadFormData();
-  }
+  ngOnInit(): void {}
   onSubmit() {
-    if (this.registrationForm.valid) {
-      const formData = this.registrationForm.value;
-      localStorage.setItem('registrationData', JSON.stringify(formData));
-      alert('Registration data saved successfully!');
-      this.router.navigate(['/home']);
-    }
+    this.authService.setUserData(this.registrationForm.value);
+    this.route();
   }
-  loadFormData() {
-    const savedData = localStorage.getItem('registrationData');
-    if (savedData) {
-      this.registrationForm.setValue(JSON.parse(savedData));
-    }
+
+  route() {
+    this.router.navigate(['/home']);
   }
 }

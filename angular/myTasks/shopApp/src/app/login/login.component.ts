@@ -26,23 +26,22 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    if (this.loginForm.valid) {
-      const formData = this.loginForm.value;
-      const savedData = localStorage.getItem('registrationData');
-      if (savedData) {
-        const userData = JSON.parse(savedData);
-        if (
-          userData.email === formData.email &&
-          userData.password === formData.password
-        ) {
-          alert('Login successful!');
-          this.router.navigate(['/home']);
-        } else {
-          alert('no such data');
-        }
-      } else {
-        alert('no such data');
-      }
+    const formData = this.loginForm.value;
+    const savedData = localStorage.getItem('registrationData');
+
+    if (!savedData) {
+      console.error('No Such data');
+      return;
+    }
+    const userData = JSON.parse(savedData);
+    if (
+      userData.email === formData.email &&
+      userData.password === formData.password
+    ) {
+      alert('Login successful!');
+      this.router.navigate(['/home']);
+    } else {
+      alert('no such data');
     }
   }
 }

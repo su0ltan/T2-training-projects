@@ -2,16 +2,28 @@
 
 
   <div class="container">
-    Login
+    <div>
+      <h4>
+        Login
+      </h4>
+    </div>
+
+    <!-- i try to use  *ngIf="loginForm.valid"  but the form disappeared-->
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-      <label for="email">Email</label>
-      <input id="email" formControlName="email" required>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input formControlName="email" type="email" class="form-control" id="email" required>
+      </div>
 
-      <label for="password">Password</label>
-      <input id="password" type="password" formControlName="password" required>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="password">
+      </div>
 
-      <button type="submit">Login</button>
+      <button type="submit" class="mb-3">Login</button>
+
+
       <p>You haven't an account? <a href="" routerLink="/registation">register</a></p>
     </form>
 

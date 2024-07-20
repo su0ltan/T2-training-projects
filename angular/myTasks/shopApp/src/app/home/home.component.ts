@@ -1,6 +1,9 @@
+import { ProductService } from './../services/product.service';
+import { AuthService } from './../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -11,83 +14,22 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent {
   isLogin = false;
-  savedData = localStorage.getItem('registrationData');
+  products: any;
 
+  constructor(
+    private auth: AuthService,
+    private productService: ProductService,
+    private cartService: CartService
+  ) {}
   ngOnInit(): void {
-    this.checkLogin();
-  }
-  checkLogin() {
-    if (this.savedData) {
-      this.isLogin = true;
-    }
+    this.isLogin = this.auth.isLogin();
+    this.products = this.productService.loadProducts();
   }
 
-  products: Product[] = [
-    {
-      name: 'Product 1',
-      description: 'Description of Product 1',
-      price: 19.99,
-      pictureUrl: 'assets/images/p1.png',
-    },
-    {
-      name: 'Product 2',
-      description: 'Description of Product 2',
-      price: 29.99,
-      pictureUrl: 'assets/images/p3.jpeg',
-    },
-    {
-      name: 'Product 3',
-      description: 'Description of Product 3',
-      price: 39.99,
-      pictureUrl: 'assets/images/p5.webp',
-    },
-    {
-      name: 'Product 4',
-      description: 'Description of Product 4',
-      price: 49.99,
-      pictureUrl: 'assets/images/r.webp',
-    },
-    {
-      name: 'Product 5',
-      description: 'Description of Product 5',
-      price: 59.99,
-      pictureUrl: 'assets/images/p6.webp',
-    },
-    {
-      name: 'Product 6',
-      description: 'Description of Product 6',
-      price: 69.99,
-      pictureUrl: 'assets/images/p7.webp',
-    },
-    {
-      name: 'Product 7',
-      description: 'Description of Product 7',
-      price: 79.99,
-      pictureUrl: 'assets/images/p1.png',
-    },
-    {
-      name: 'Product 8',
-      description: 'Description of Product 8',
-      price: 89.99,
-      pictureUrl: 'assets/images/p3.jpeg',
-    },
-    {
-      name: 'Product 9',
-      description: 'Description of Product 9',
-      price: 99.99,
-      pictureUrl: 'assets/images/p6.webp',
-    },
-    {
-      name: 'Product 10',
-      description: 'Description of Product 10',
-      price: 109.99,
-      pictureUrl: 'assets/images/p5.webp',
-    },
-  ];
-}
-interface Product {
-  name: string;
-  description: string;
-  price: number;
-  pictureUrl: string;
+  add() {
+    this.productService.addProduct();
+  }
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
+  }
 }

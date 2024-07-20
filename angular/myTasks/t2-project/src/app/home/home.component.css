@@ -1,0 +1,18 @@
+.board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa; /* Optional background color for the board */
+}
+.btn {
+  background-color: rgb(124, 186, 0);
+  color: white;
+  width: 20%;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: rgb(124, 186, 0);
+  border: 1px solid;
+}
