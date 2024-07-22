@@ -1,23 +1,33 @@
 <div class="home">
   <div class="container">
 
-    <!-- Text are Board -->
-    <div class="row h-100">
-      <div class="col-12 col-md-5 my-1 d-flex flex-column ">
-        <textarea class="form-control" style="width:100%; height: 80vh; border: 1px solid #000;" rows="10"></textarea>
+    <!-- Data area -->
+    <div class="row h-100 p-2">
+      <div class="col-12 col-md-6 my-2 d-flex flex-column ">
+        <div class="form-control" id="data" style="width:100%; height: 100%; min-height: 80vh; border: 1px solid #000;">
+
+          <p *ngFor="let item of obj">
+            {{item[0]}}: {{item[1]}}
+          </p>
+        </div>
       </div>
 
-      <div class="col-12 col-md-5 d-flex align-items-center justify-content-center">
+      <!-- Board -->
+      <div class="col-12 col-md-6 my-2 d-flex">
 
-        <div class="board" style="width:100%; height: 80vh; border: 1px solid #000;">
+        <div class="board" style="width:100%; height: 100%; min-height: 80vh; border: 1px solid #000;">
+          <h4>Encrypted Object</h4>
+          <p>
+            {{encryptedData.value}}
+          </p>
+
         </div>
       </div>
     </div>
 
-
-    <!-- Button -->
+    <!-- Display Button -->
     <div>
-      <button class="btn mb-3">
+      <button class="btn mb-3" (click)="sendData()">
         Display
       </button>
     </div>

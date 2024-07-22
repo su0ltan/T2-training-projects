@@ -1,9 +1,16 @@
 .board {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f8f9fa; /* Optional background color for the board */
+  width: 100%;
+
+  padding: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
+
 .btn {
   background-color: rgb(124, 186, 0);
   color: white;
