@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { HeaderComponent } from '../components/header/header.component';
+import { GeneralServicesService } from '../services/general-services.service';
 @Component({
   selector: 'app-registarion',
   standalone: true,
@@ -22,7 +23,8 @@ export class RegistarionComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private authGlobalservices: GeneralServicesService
   ) {
     this.registrationForm = this.fb.group({
       firstName: ['', Validators.required],

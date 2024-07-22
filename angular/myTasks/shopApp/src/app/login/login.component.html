@@ -21,7 +21,7 @@
         <input formControlName="password" type="password" class="form-control" id="password">
       </div>
 
-      <button type="submit" class="mb-3">Login</button>
+      <button type="submit" class="mb-3" [disabled]="loginForm.invalid">Login</button>
 
 
       <p>You haven't an account? <a href="" routerLink="/registation">register</a></p>

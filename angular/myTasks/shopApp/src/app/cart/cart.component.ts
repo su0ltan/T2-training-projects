@@ -4,11 +4,12 @@ import { AuthService } from '../services/auth.service';
 import { ProductService } from '../services/product.service';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
 })
@@ -27,12 +28,13 @@ export class CartComponent {
 
   remoiveItem(id: any) {
     this.cartService.removeFromCart(id);
+    this.cart = this.cartService.getCart();
   }
 
-  updateQuantity(id: any) {
-    this.cartService.updateQuantity(
-      id,
-      this.number.value ? parseInt(this.number.value) : 1
-    );
+  updateQuantity(id: any, opration: string) {
+    this.cartService.updateQuantity(id, opration);
+  }
+  getTotal() {
+    return this.cartService.getTotal();
   }
 }
