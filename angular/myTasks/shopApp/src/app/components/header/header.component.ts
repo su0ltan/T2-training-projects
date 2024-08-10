@@ -20,7 +20,9 @@ export class HeaderComponent {
 
   ngOnInit(): void {
     this.num = this.cartService.getCartLength();
-    console.log(this.num);
+  }
+  getLength() {
+    return this.cartService.getCartLength();
   }
   logout() {
     if (confirm('Are you sure that you want to logout?'))
@@ -28,6 +30,6 @@ export class HeaderComponent {
     location.reload();
   }
   isLogin() {
-    return this.authService.isLogin();
+    return this.authService.isLogin;
   }
 }

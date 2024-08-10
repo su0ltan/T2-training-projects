@@ -6,22 +6,23 @@
           <div class="col">
             <h4><b>Shopping Cart</b></h4>
           </div>
-          <div class="col align-self-center text-right text-muted">{{cart.length}} items</div>
+          <div class="col align-self-center text-right text-muted">{{getCart().length}} items</div>
         </div>
       </div>
-      <div *ngIf="cart.length == 0">
+      <div *ngIf="length == 0">
         <p>Empty Cart</p>
       </div>
-      <div class="row border-top border-bottom" *ngFor="let c of cart">
+      <div class="row border-top border-bottom" *ngFor="let c of getCart()">
+        @if(true){}
         <div class="row main align-items-center">
-          <div class="col-2"><img class="img-fluid" src={{c.pictureUrl}}></div>
+          <div class="col-2"><img class="img-fluid" src={{c.image}}></div>
           <div class="col">
-            <div class="row text-muted"> {{c.name}}</div>
-            <div class="row">{{c.description}}</div>
+            <div class="row text-muted"> {{c.title}}</div>
+            <div class="row">{{c.category}}</div>
           </div>
           <div class="col">
-            <a href="/cart" (click)="updateQuantity(c.id, 'minus')">-</a><a href="/cart"
-              class="border">{{c.quantity}}</a><a href="/cart" (click)="updateQuantity(c.id, 'add')">+</a>
+            <a (click)="updateQuantity(c.id, '-')">-</a><a class="border">{{c.qty}}</a><a
+              (click)="updateQuantity(c.id, '+')">+</a>
           </div>
           <div class="col"> {{c.price}} <span class="close">SAR</span></div>
 
@@ -49,13 +50,13 @@
       <div class="back-to-shop" [routerLink]="['/home']" routerLinkActive="router-link-active"><a
           href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
     </div>
-    <div class="col-md-4 summary" *ngIf="cart.length != 0">
+    <div class="col-md-4 summary" *ngIf="getCart().length != 0">
       <div>
         <h5><b>Summary</b></h5>
       </div>
       <hr>
       <div class="row">
-        <div class="col" style="padding-left:0;">{{cart.length}} items</div>
+        <div class="col" style="padding-left:0;">{{getCart().length}} items</div>
         <div class="col text-right">SAR {{getTotal()}}</div>
       </div>
       <form>

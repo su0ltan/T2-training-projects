@@ -1,0 +1,52 @@
+<form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col" sbSortable="username" (sort)="onSort($event)">
+          <span>Username</span>
+        </th>
+        <th scope="col" sbSortable="firstname" (sort)="onSort($event)">
+          <span>Firstname</span>
+        </th>
+        <th scope="col" sbSortable="lastname" (sort)="onSort($event)">
+          <span>Lastname</span>
+        </th>
+        <th scope="col" sbSortable="email" (sort)="onSort($event)">
+          <span>Email</span>
+        </th>
+        <th scope="col" sbSortable="phone" (sort)="onSort($event)">
+          <span>Phone</span>
+        </th>
+        <th scope="col" sbSortable="address" (sort)="onSort($event)">
+          <span>Address</span>
+        </th>
+        <th scope="col" sbSortable="action" (sort)="onSort($event)">
+          <span>Action</span>
+        </th>
+        <!-- <th scope="col" sbSortable="status" (sort)="onSort($event)">
+          <span>Status</span>
+        </th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userData; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.username }}</td>
+        <td>{{ user.name.firstname }}</td>
+        <td>{{ user.name.lastname }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.address.city }}, {{ user.address.street }}, {{ user.address.number }}, {{ user.address.zipcode }}
+        </td>
+        <td>
+          <!-- Add your action buttons here -->
+          <button class="btn btn-primary w-100">Edit</button>
+          <button class="btn btn-danger w-100 my-1">Delete</button>
+        </td>
+        <!-- <td>Add status if needed</td> -->
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-between p-2"></div>
+</form>

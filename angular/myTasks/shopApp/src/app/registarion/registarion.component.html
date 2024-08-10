@@ -1,37 +1,27 @@
-<div class="registation">
-  <div class="container">
-    <div>
-      <h4>
-        Register now
-      </h4>
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+      <h4 class="text-center">Register now</h4>
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="border p-3 rounded">
+        <div class="mb-3">
+          <label for="firstName" class="form-label">First Name</label>
+          <input formControlName="firstName" type="text" class="form-control" name="firstName" id="firstName">
+        </div>
+        <div class="mb-3">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input formControlName="lastName" type="text" class="form-control" id="lastName" name="lastName" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input formControlName="email" type="email" class="form-control" name="email" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input formControlName="password" type="password" class="form-control" name="password" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Save</button>
+        <p class="text-center mt-3">Have an account? <a href="" routerLink="/login">Login</a></p>
+      </form>
     </div>
-
-    <!-- i try to use  *ngIf="registrationForm.valid"   but the form disappeared-->
-    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-
-
-      <div class="mb-3">
-        <label for="firstName" class="form-label">First Name</label>
-        <input formControlName="firstName" type="text" class="form-control" id="firstName">
-      </div>
-      <div class="mb-3">
-        <label for="lastName" class="form-label">Last Name</label>
-        <input formControlName="lastName" type="text" class="form-control" id="lastName" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input formControlName="email" type="email" class="form-control" id="email" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input formControlName="password" type="password" class="form-control" id="password">
-      </div>
-
-
-      <button type="submit">Save</button>
-      <p>Have an account? <a href="" routerLink="/login">Login</a></p>
-    </form>
   </div>
 </div>

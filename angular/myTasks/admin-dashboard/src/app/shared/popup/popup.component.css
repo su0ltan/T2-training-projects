@@ -1,0 +1,29 @@
+.dialog {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+button {
+  width: 40%;
+  color: white;
+  background-color: #0099e6;
+  border: 1px solid #0099e6;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+button:hover {
+  color: #0099e6;
+  background-color: white;
+}
+.action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  position: absolute;
+  bottom: 10px;
+}
+img {
+  height: 200px;
+}

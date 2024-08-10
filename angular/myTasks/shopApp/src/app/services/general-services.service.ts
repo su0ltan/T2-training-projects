@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class GeneralServicesService {
   constructor() {}
 
-  alert(message: any) {
+  alert(message: string) {
     window.alert(message);
   }
 }

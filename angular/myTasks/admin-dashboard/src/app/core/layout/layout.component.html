@@ -1,0 +1,70 @@
+<div class="container-fluid d-flex flex-column min-vh-100">
+  <div class="row flex-grow-1">
+    <div class="col-3">
+      <aside
+        class="bg-dark slidebar 0 text-white start-0 my-4 w-100 mx-1 h-100 vh-100 rounded transition-transform duration-300">
+        <div class="relative border-bottom border-white-50">
+          <div class="d-flex align-items-center gap-4 py-3 px-4">
+            <h6 class="m-0 font-weight-bold text-white">Admin Dashboard</h6>
+          </div>
+        </div>
+        <div class="m-4">
+          <ul class="mb-4 list-unstyled">
+            <!-- <li>
+              <a routerLink="/dashboard">
+                <button routerLinkActive="bg-primary shadow-md hover:shadow-lg"
+                  class="btn btn-link text-white w-100 d-flex align-items-center gap-4 px-4 py-2">
+                  <p class="m-0 text-white">Dashboard</p>
+                </button>
+              </a>
+            </li> -->
+            <li>
+              <a routerLink="/products">
+                <button routerLinkActive="bg-primary shadow-md hover:shadow-lg"
+                  class="btn btn-link text-white w-100 d-flex align-items-center gap-4 px-4 py-2">
+                  <p class="m-0 text-white">Products</p>
+                </button>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/carts">
+                <button routerLinkActive="bg-primary shadow-md hover:shadow-lg"
+                  class="btn btn-link text-white w-100 d-flex align-items-center gap-4 px-4 py-2">
+                  <p class="m-0 text-white">Cart</p>
+                </button>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/users">
+                <button class="btn btn-link text-white w-100 d-flex align-items-center gap-4 px-4 py-2">
+                  <p class="m-0 text-white">Users</p>
+                </button>
+              </a>
+            </li>
+            <hr>
+            <li>
+              <a>
+                <button class="btn btn-link text-white w-100 d-flex align-items-center gap-4 px-4 py-2">
+                  <p class="m-0 text-white">Login</p>
+                </button>
+              </a>
+            </li>
+            <li>
+              <a>
+                <button class="btn btn-link text-white w-100 d-flex align-items-center gap-4 px-4 py-2">
+                  <p class="m-0 text-white">Register</p>
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-9">
+      <div class="container">
+        <app-dashboard></app-dashboard>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

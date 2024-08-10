@@ -1,4 +1,4 @@
-.registation {
+/* .registation {
   width: 100%;
 }
 .registation .container {
@@ -7,9 +7,10 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 10px;
+  width: 100%;
 }
 .registation form {
-  width: fit-content;
+  width: 40%;
   padding: 15px 15px;
   display: flex;
   flex-direction: column;
@@ -17,6 +18,11 @@
   justify-content: center;
   border: 1px solid black;
   border-radius: 3px;
+}
+@media (max-width: 767px) {
+  .registation form {
+    width: 80%;
+  }
 }
 .registation form input {
   margin-bottom: 10px;
@@ -30,8 +36,10 @@
   border-radius: 3px;
   width: 80%;
 }
-
+.registation form div {
+  width: 80%;
+}
 .registation form button:hover {
   background-color: white;
   color: #0099e6;
-}
+} */

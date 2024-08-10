@@ -1,0 +1,26 @@
+<div class="dialog container">
+  <strong mat-dialog-title>{{product.title}}</strong>
+  <div class="row my-5">
+
+    <img mat-dialog-image [src]='product.image' alt="product picture" class="col-md-4">
+    <div class="col-md-8">
+      <p mat-dialog-category><strong>Category:</strong> {{product.category}}</p>
+      <p mat-dialog-description>{{product.description}}</p>
+      <strong mat-dialog-price>{{product.price}} <span>SAR</span></strong>
+      <p mat-dialog-description>Rating:{{product.rating.rate}}/5</p>
+
+    </div>
+
+  </div>
+
+  <div mat-dialog-content>
+
+  </div>
+
+  <div class="action" mat-dialog-action>
+    <button (click)="addToCart()">Add to cart</button>
+    <button (click)="closePopup()" mat-raised-button color="warn">close</button>
+
+
+  </div>
+</div>

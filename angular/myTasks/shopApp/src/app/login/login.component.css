@@ -1,4 +1,4 @@
-.login {
+/* .login {
   width: 100%;
 }
 .login .container {
@@ -8,9 +8,21 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 10px;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .login form {
+    width: 80%;
+  }
+}
+@media (min-width: 767px) and(max-width: 1200px) {
+  .login form {
+    width: 80%;
+  }
 }
 .login form {
-  width: fit-content;
+  position: relative;
+  width: 40%;
   padding: 15px 15px;
   display: flex;
   flex-direction: column;
@@ -22,6 +34,9 @@
 .login form input {
   margin-bottom: 10px;
   padding: 5px;
+}
+.login form div {
+  width: 80%;
 }
 .login form button {
   padding: 5px;
@@ -35,4 +50,5 @@
 .login form button:hover {
   background-color: white;
   color: #0099e6;
-}
+} */
+/* Custom styles for the registration form */

@@ -7,9 +7,10 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { HeaderComponent } from '../components/header/header.component';
 import { GeneralServicesService } from '../services/general-services.service';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-registarion',
   standalone: true,
@@ -19,6 +20,7 @@ import { GeneralServicesService } from '../services/general-services.service';
 })
 export class RegistarionComponent implements OnInit {
   registrationForm: FormGroup;
+  isSubmited = false;
 
   constructor(
     private fb: FormBuilder,
@@ -35,11 +37,26 @@ export class RegistarionComponent implements OnInit {
   }
   ngOnInit(): void {}
   onSubmit() {
+    this.isSubmited = true;
     this.authService.setUserData(this.registrationForm.value);
     this.route();
   }
 
   route() {
     this.router.navigate(['/home']);
+  }
+
+  canExit() {
+    if (
+      (this.registrationForm.value.firstName ||
+        this.registrationForm.value.lastName ||
+        this.registrationForm.value.email ||
+        this.registrationForm.value.password) &&
+      !this.isSubmited
+    ) {
+      return confirm(
+        'Are you sure that you want to exit the registration form ?'
+      );
+    } else return false;
   }
 }

@@ -1,0 +1,65 @@
+<form>
+
+  <div class="row my-2">
+    <div class="form-group col">
+      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchQuery"
+        (ngModelChange)="search($event)" name="search" />
+    </div>
+    <div class="form-group col-3">
+      <select class="form-control" id="pageSize" (change)="onPageSizeChange($event)">
+        <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+      </select>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col" (click)="onHeaderClick($event)" sbSortable="productname" (sort)="onSort($event)">
+          <span>Title</span>
+        </th>
+        <th scope="col" (click)="onHeaderClick($event)" sbSortable="description" (sort)="onSort($event)">
+          <span>Description</span>
+        </th>
+        <th scope="col" sbSortable="image" (click)="onHeaderClick($event)" (sort)="onSort($event)">
+          <span>Image</span>
+        </th>
+        <th scope="col" sbSortable="category" (click)="onHeaderClick($event)" (sort)="onSort($event)">
+          <span>Category</span>
+        </th>
+        <th scope="col" sbSortable="price" (click)="onHeaderClick($event)" (sort)="onSort($event)">
+          <span>Price</span>
+        </th>
+        <th scope="col" sbSortable="rating" (click)="onHeaderClick($event)" (sort)="onSort($event)">
+          <span>Rating</span>
+        </th>
+        <th scope="col" sbSortable="action" v (click)="onHeaderClick($event)" (sort)="onSort($event)">
+          <span>Action</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of getProducts(); let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ product.title }}</td>
+        <td class="max-width">{{ product.description }}</td>
+
+        <td class="max-width"><img [src]="product.image" alt="{{ product.title }}" class="img-fluid" /></td>
+        <td class="max-width">{{ product.category }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.rating.rate }}/5, {{ product.rating.count }} people</td>
+        <td>
+          <button class="btn btn-primary w-100" (click)="openPopup(product)">Edit</button>
+          <button class="btn btn-danger w-100 my-1" (click)="deleteItem(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-between p-2"></div>
+  <div class="form-group my-3 text-center">
+
+
+    <button *ngIf="limit <= getLength()" (click)="loadMore()" class="btn btn-primary">Load More</button>
+  </div>
+</form>

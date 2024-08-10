@@ -1,0 +1,8 @@
+tr {
+  border: 1px solid grey;
+}
+
+th,
+td {
+  border-right: 1px solid grey;
+}

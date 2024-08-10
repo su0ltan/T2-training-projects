@@ -1,88 +1,80 @@
-import { elementAt } from 'rxjs';
+import { Product } from './../models/product';
+import { HttpClient } from '@angular/common/http';
+import { elementAt, flatMap, Observable, tap } from 'rxjs';
 import { ProductService } from './product.service';
 import { Injectable } from '@angular/core';
+import { Cart } from '../models/cart';
+import { AuthService } from './auth.service';
+import { CartDetails } from '../models/CartDetails';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  products;
-  constructor(private productService: ProductService) {
-    this.products = productService.loadProducts();
+  //cartDetails: CartDetails[] = [];
+  cart!: Cart[];
+  currentCartDetails!: Cart;
+  products!: Product[];
+
+  constructor(
+    private productService: ProductService,
+    private http: HttpClient,
+    private auth: AuthService
+  ) {}
+  getCart() {
+    const cart = localStorage.getItem('cart');
+    if (!cart) return;
+
+    return JSON.parse(cart)['id'];
   }
-  getCart(): any[] {
-    let cart = localStorage.getItem('cart');
-    return cart ? JSON.parse(cart) : [];
+
+  getApiCart() {
+    return this.http.get<Cart[]>(`carts/user/${3}`);
   }
 
   getCartLength() {
-    return this.getCart().length;
-  }
-
-  addToCart(productId: any) {
-    const newCart = this.getCart();
-
-    const product = this.products.find(function (product: { id: any }) {
-      return product.id == productId;
-    });
-
-    if (newCart.length == 0) {
-      product.quantity = 1;
-      newCart.push(product);
-    } else {
-      const res = newCart.find((element) => element.id == productId);
-
-      if (res === undefined) {
-        product.quantity = 1;
-        newCart.push(product);
-      }
-    }
-
-    localStorage.setItem('cart', JSON.stringify(newCart));
+    if (!this.currentCartDetails) return 0;
+    return this.currentCartDetails.products.length;
   }
 
   removeFromCart(productID: any) {
-    const newCart = this.getCart();
-
-    const temp = newCart.filter((item) => item.id != productID);
-    this.addAllProductToCart(temp);
+    this.products = this.products.filter((el) => {
+      return el.id != productID;
+    });
   }
 
   getTotal() {
     let total = 0;
-    for (let item of this.getCart()) {
-      const price = item.price * item.quantity;
-      total = total + price;
-    }
+    this.products.forEach((product) => {
+      total = total + product.price * product.qty!;
+    });
 
-    return total;
-    //this function will return the totoal price in cart
+    return total.toFixed(2);
   }
   updateQuantity(productID: any, opration: string) {
-    let newCart = this.getCart();
-
-    for (let product of newCart) {
-      if (opration == 'add') {
-        if (product.id == productID) {
-          product.quantity++;
-          break;
-        }
-      } else {
-        if (product.id == productID && product.quantity != 1) {
-          product.quantity--;
-          break;
-        } else if (product.id == productID && product.quantity == 1) {
-          newCart = newCart.filter((item) => item.id != productID);
-          break;
-        }
+    this.products.forEach((obj) => {
+      if (obj.id == productID) {
+        opration == '+' ? obj.qty!++ : obj.qty!--;
       }
-    }
-
-    this.addAllProductToCart(newCart);
-    this.getCart;
+    });
   }
 
-  addAllProductToCart(cart: any) {
-    localStorage.setItem('cart', JSON.stringify(cart));
+  addToCart(product: Product) {
+    let isItInCart = false;
+    if (!this.products) return;
+    this.products.forEach((p) => {
+      console.log(p);
+      if (p.id == product.id) {
+        p.qty!++;
+        isItInCart = true;
+        return;
+      }
+    });
+
+    if (!isItInCart) {
+      product.qty = 1;
+      this.products.push(product);
+      console.log('the product added successfully');
+    }
   }
 }

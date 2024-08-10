@@ -1,0 +1,42 @@
+svg {
+  width: 25px;
+  height: 25px;
+}
+.bg-primary {
+  background-color: rgb(43, 32, 42);
+}
+
+a,
+button {
+  text-decoration: none;
+}
+
+li:hover {
+  background-color: rgb(59, 59, 141);
+}
+
+li {
+  border-radius: 3px;
+}
+
+/* .slidebar {
+  min-width: 200px;
+
+  position: relative;
+} */
+/* core/layout/layout.component.css */
+
+/* Ensure the sidebar and content are side by side */
+.sidebar {
+  width: 25%; /* Adjust as needed */
+  height: 100vh; /* Full height */
+  position: fixed; /* Fixed position for the sidebar */
+  right: 0; /* Sidebar on the right */
+  top: 0; /* Align with top of the viewport */
+}
+
+.content {
+  margin-right: 25%; /* Push content to the left of the sidebar */
+  height: 100vh; /* Full height */
+  overflow-y: auto; /* Add vertical scroll if needed */
+}

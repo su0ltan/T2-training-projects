@@ -1,0 +1,40 @@
+<div class="dialog container">
+  <strong mat-dialog-title>Edit Product: {{product.title}}</strong>
+  <div class="row my-5">
+    <img mat-dialog-image [src]='product.image' alt="product picture" class="col-md-4">
+    <div class="col-md-8">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="product.title" name="title">
+      </div>
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <select class="form-control" id="category" [(ngModel)]="product.category" name="category">
+
+          <option *ngIf="!product.category" value="" disabled selected>Select a category</option>
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" [(ngModel)]="product.description" name="description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating:</label>
+        <input type="number" class="form-control" id="rating" [(ngModel)]="product.rating.rate" name="rating" step="0.1"
+          max="5">
+      </div>
+    </div>
+  </div>
+
+  <div mat-dialog-content></div>
+
+  <div class="action" mat-dialog-action>
+    <button (click)="closePopup()" mat-raised-button color="warn">Close</button>
+    <button (click)="saveChanges(product)" mat-raised-button color="primary">Save</button>
+  </div>
+</div>

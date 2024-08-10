@@ -1,0 +1,20 @@
+.table td,
+.table th {
+  vertical-align: middle;
+  max-width: 150px; /* Adjust as needed */
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.maxWidth {
+  max-width: 150px;
+}
+
+tr {
+  border: 1px solid grey;
+}
+
+th,
+td {
+  border-right: 1px solid grey;
+}
